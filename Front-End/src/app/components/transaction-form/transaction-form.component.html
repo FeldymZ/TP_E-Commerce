@@ -1,0 +1,28 @@
+<h2>Saisir une Nouvelle Transaction</h2>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+
+  <label for="origine">Origine :</label>
+  <input id="origine" [(ngModel)]="transaction.origineTrx" name="origineTrx" required><br>
+
+  <label for="moyen">Moyen :</label>
+  <input id="moyen" [(ngModel)]="transaction.moyen" name="moyen" required><br>
+
+  <label for="numpan">Numéro PAN :</label>
+  <input id="numpan" [(ngModel)]="transaction.numpan" name="numpan" required><br>
+
+  <label for="datefin">Date Fin (MM/YYYY) :</label>
+  <input id="datefin" type="month" [(ngModel)]="transaction.datefin" name="datefin" required><br>
+
+  <label for="cvx">CVX :</label>
+  <input id="cvx" [(ngModel)]="transaction.cvx" name="cvx" required><br>
+
+  <label for="montant">Montant :</label>
+  <input id="montant" type="number" [(ngModel)]="transaction.montant" name="montant" required><br>
+
+  <label for="devise">Devise :</label>
+  <select id="devise" [(ngModel)]="transaction.devise" name="devise" required>
+    <option *ngFor="let monnaie of monnaies" [value]="monnaie">{{ monnaie }}</option>
+  </select><br>
+
+  <button type="submit">Enregistrer</button>
+</form>

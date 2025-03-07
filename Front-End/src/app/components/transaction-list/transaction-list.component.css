@@ -1,0 +1,66 @@
+/* Style général du tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    min-width: 800px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style des en-têtes */
+thead {
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Espacement des cellules */
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* Style des lignes */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Alternance des couleurs de lignes */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Effet de survol */
+tbody tr:hover {
+    background-color: #d1ecf1;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Style particulier pour la colonne PAN */
+td:nth-child(6) {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* Bordure du tableau */
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+/* Ajout de bord arrondi */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    table {
+        font-size: 14px;
+    }
+}
+    

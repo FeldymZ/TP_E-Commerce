@@ -1,0 +1,37 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Node (Angular)
+node_modules/
+dist/
+
+# IDE (IntelliJ, VSCode, Eclipse)
+.idea/
+.vscode/
+
+# OS System Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build files (Spring Boot)
+target/
+build/
+
+# Config sensibles
+.env
+application.properties
+application.yml
+
+# Fichiers compilés
+*.class
+*.jar
+*.war
+*.ear

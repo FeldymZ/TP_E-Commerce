@@ -1,0 +1,31 @@
+<h2>Liste des Transactions</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID_TRX</th>
+      <th>DATE_TRX</th>
+      <th>HEURE_TRX</th>
+      <th>ORIG_TRX</th>
+      <th>MOYEN</th>
+      <th>NUMPAN</th>
+      <th>DATEFIN</th>
+      <th>CVX</th>
+      <th>MNT</th>
+      <th>DEVISE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let trx of transactions">
+      <td>{{ trx.idTrx }}</td>
+      <td>{{ trx.dateTrx }}</td>
+      <td>{{ trx.heureTrx }}</td>
+      <td>{{ trx.origineTrx }}</td>
+      <td>{{ trx.moyen }}</td>
+      <td>{{ maskPan(trx.numpan) }}</td>  <!-- ✅ C'est ici que tu appelles la méthode -->
+      <td>{{ trx.datefin }}</td>
+      <td>{{ trx.cvx }}</td>
+      <td>{{ trx.montant }}</td>
+      <td>{{ trx.devise }}</td>
+    </tr>
+  </tbody>
+</table>
