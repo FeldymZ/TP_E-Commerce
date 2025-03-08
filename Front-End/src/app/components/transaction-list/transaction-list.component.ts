@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TransactionService, MoneticoTransaction } from '../../services/transaction.service';
-import { CommonModule } from '@angular/common';  // ✅ Import obligatoire pour *ngFor
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-transaction-list',
   standalone: true,
   templateUrl: './transaction-list.component.html',
   styleUrls: ['./transaction-list.component.css'],
-  imports: [CommonModule]  // ✅ Ajoute CommonModule ici !
+  imports: [CommonModule]
 })
 export class TransactionListComponent implements OnInit {
 
@@ -27,10 +27,11 @@ export class TransactionListComponent implements OnInit {
     });
   }
 
+  /** Masque les 6 chiffres du milieu du PAN */
   maskPan(pan: string): string {
-    if (pan.length < 16) {
-      return pan; // Cas extrême de sécurité
+    if (!pan || pan.length < 16) {
+      return pan; // Vérification pour éviter les erreurs si PAN trop court
     }
-    return pan.substring(0, 4) + ' XXXX XXXX ' + pan.substring(12);
+    return pan.substring(0, 6) + "******" + pan.substring(12);  // Masque les 6 chiffres du milieu
   }
 }
